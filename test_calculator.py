@@ -1,5 +1,5 @@
 import pytest
-from calculator import divide
+from calculator import divide, multiply
 
 def test_normal_division():
     assert divide(10, 2) == 5
@@ -10,3 +10,6 @@ def test_negative_division():
 def test_division_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
+
+def test_multiply():
+    assert multiply(3, 4) == 12
